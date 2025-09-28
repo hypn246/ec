@@ -1,0 +1,17 @@
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.Form1.resources
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.csproj.GenerateResource.cache
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.AssemblyInfo.cs
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\lab\gui\elect\bin\Debug\net8.0-windows\elect.exe
+C:\Users\admin\Desktop\lab\gui\elect\bin\Debug\net8.0-windows\elect.deps.json
+C:\Users\admin\Desktop\lab\gui\elect\bin\Debug\net8.0-windows\elect.runtimeconfig.json
+C:\Users\admin\Desktop\lab\gui\elect\bin\Debug\net8.0-windows\elect.dll
+C:\Users\admin\Desktop\lab\gui\elect\bin\Debug\net8.0-windows\elect.pdb
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.dll
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\refint\elect.dll
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.pdb
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.genruntimeconfig.cache
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\ref\elect.dll
+C:\Users\admin\Desktop\lab\gui\elect\obj\Debug\net8.0-windows\elect.Properties.Resources.resources
