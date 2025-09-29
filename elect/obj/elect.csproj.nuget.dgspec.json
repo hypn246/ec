@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Desktop\\lab\\gui\\elect\\elect.csproj": {}
+    "C:\\Users\\admin\\Desktop\\lab\\gui\\ec\\elect\\elect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Desktop\\lab\\gui\\elect\\elect.csproj": {
+    "C:\\Users\\admin\\Desktop\\lab\\gui\\ec\\elect\\elect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Desktop\\lab\\gui\\elect\\elect.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\lab\\gui\\ec\\elect\\elect.csproj",
         "projectName": "elect",
-        "projectPath": "C:\\Users\\admin\\Desktop\\lab\\gui\\elect\\elect.csproj",
+        "projectPath": "C:\\Users\\admin\\Desktop\\lab\\gui\\ec\\elect\\elect.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Desktop\\lab\\gui\\elect\\obj\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\lab\\gui\\ec\\elect\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -165,21 +165,55 @@ namespace elect
 
                 double k = moneyTokWh(t / 108 * 100);       //total kwh
 
-                double kOld=double.Parse(tbOld.Text.Trim());
-                double kNew=double.Parse(tbNew.Text.Trim());
-                int kThue = Convert.ToInt32(kNew-kOld);       //user kwh
+                double kOld = double.Parse(tbOld.Text.Trim());
+                double kNew = double.Parse(tbNew.Text.Trim());
+                int kThue = Convert.ToInt32(kNew - kOld);       //user kwh
                 int kF = Convert.ToInt32(k - kThue);        //family kwh
 
 
                 //user usage = total - family used(family kwh*scale*1.08)
                 double result = t - kWhToMoney(k - kThue) * 1.08;
-                MessageBox.Show("Tiền điện khách phải trả là:\n" + result.ToString() + " VNĐ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tiền điện khách phải trả là:\n" + result.ToString() + " VNĐ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                label8.Text = result.ToString();
 
 
             }
             catch (FormatException ex)
             {
                 MessageBox.Show("Nhập số đi con lợn!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string money = tbTien.Text.Trim();     //total money
+
+                double kOld = double.Parse(tbOld.Text.Trim());
+                double kNew = double.Parse(tbNew.Text.Trim());
+                int kThue = Convert.ToInt32(kNew - kOld);       //user kwh
+                string result=label8.Text.Trim(); // client bill
+
+                string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                // Tạo chuỗi JSON thủ công
+                string json = $"{{ \"DateTime\": \"{dateTime}\", \"soCu\": {kOld}, \"soMoi\": {kNew}, \"Tien\": {money:F3}}}";
+
+
+                string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string logFilePath = Path.Combine(documentsPath, "log.txt");
+
+                File.AppendAllText(logFilePath, json + Environment.NewLine);
+
+                MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbTien.Text = "";
+                tbOld.Text = "";
+                tbNew.Text = "";
+                label8.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi!!!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
         }
     }
