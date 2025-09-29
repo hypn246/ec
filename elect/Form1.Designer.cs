@@ -66,7 +66,7 @@
             tabControl1.Location = new Point(0, 0);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(862, 750);
+            tabControl1.Size = new Size(870, 789);
             tabControl1.TabIndex = 0;
             // 
             // tabPage2
@@ -75,7 +75,7 @@
             tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(854, 709);
+            tabPage2.Size = new Size(862, 748);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Tính theo số điện";
             tabPage2.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(848, 703);
+            panel2.Size = new Size(856, 742);
             panel2.TabIndex = 12;
             // 
             // label8
@@ -203,7 +203,7 @@
             tabPage1.Location = new Point(4, 37);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(854, 709);
+            tabPage1.Size = new Size(862, 748);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Tính theo hóa đơn";
             // 
@@ -219,7 +219,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(848, 703);
+            panel1.Size = new Size(856, 742);
             panel1.TabIndex = 11;
             // 
             // textBox2
@@ -282,8 +282,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(862, 750);
+            ClientSize = new Size(870, 789);
             Controls.Add(tabControl1);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
