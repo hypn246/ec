@@ -43,6 +43,8 @@
             tbTien = new TextBox();
             tabPage1 = new TabPage();
             panel1 = new Panel();
+            label9 = new Label();
+            button4 = new Button();
             textBox2 = new TextBox();
             button1 = new Button();
             label4 = new Label();
@@ -71,6 +73,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.DarkBlue;
             tabPage2.Controls.Add(panel2);
             tabPage2.Location = new Point(4, 37);
             tabPage2.Name = "tabPage2";
@@ -78,7 +81,6 @@
             tabPage2.Size = new Size(862, 748);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Tính theo số điện";
-            tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -198,7 +200,7 @@
             // 
             // tabPage1
             // 
-            tabPage1.BackColor = Color.Black;
+            tabPage1.BackColor = Color.Crimson;
             tabPage1.Controls.Add(panel1);
             tabPage1.Location = new Point(4, 37);
             tabPage1.Name = "tabPage1";
@@ -210,6 +212,8 @@
             // panel1
             // 
             panel1.BackColor = Color.LightSteelBlue;
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(button4);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label4);
@@ -222,10 +226,30 @@
             panel1.Size = new Size(856, 742);
             panel1.TabIndex = 11;
             // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(367, 412);
+            label9.Name = "label9";
+            label9.Size = new Size(107, 28);
+            label9.TabIndex = 19;
+            label9.Text = "ABCD.XYZ";
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.Location = new Point(367, 605);
+            button4.Name = "button4";
+            button4.Size = new Size(119, 55);
+            button4.TabIndex = 18;
+            button4.Text = "Lưu";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(477, 317);
+            textBox2.Location = new Point(477, 300);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(239, 38);
             textBox2.TabIndex = 14;
@@ -233,12 +257,13 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(367, 460);
+            button1.Location = new Point(367, 501);
             button1.Name = "button1";
             button1.Size = new Size(119, 55);
             button1.TabIndex = 13;
             button1.Text = "Tính toán";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // label4
             // 
@@ -254,7 +279,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(154, 320);
+            label2.Location = new Point(154, 300);
             label2.Name = "label2";
             label2.Size = new Size(292, 31);
             label2.TabIndex = 11;
@@ -322,5 +347,7 @@
         private Button button1;
         private Button button3;
         private Label label8;
+        private Button button4;
+        private Label label9;
     }
 }

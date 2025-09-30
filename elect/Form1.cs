@@ -7,6 +7,7 @@ namespace elect
         public Form1()
         {
             InitializeComponent();
+            label9.Text = "";
         }
         //Tính kí điện tổng từ tiền hóa đơn
         public static double moneyTokWh(double amount, int tier = 1)
@@ -173,8 +174,8 @@ namespace elect
 
                 //user usage = total - family used(family kwh*scale*1.08)
                 double result = t - kWhToMoney(k - kThue) * 1.08;
-                MessageBox.Show("Tiền điện khách phải trả là:\n" + result.ToString() + " VNĐ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                label8.Text = result.ToString();
+                MessageBox.Show("Tiền điện khách phải trả là:\n" + result.ToString("F3") + " VNĐ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                label8.Text = result.ToString("F3");
 
 
             }
@@ -192,7 +193,7 @@ namespace elect
                 double kOld = double.Parse(tbOld.Text.Trim());
                 double kNew = double.Parse(tbNew.Text.Trim());
                 int kThue = Convert.ToInt32(kNew - kOld);       //user kwh
-                string result=label8.Text.Trim(); // client bill
+                string result = label8.Text.Trim(); // client bill
 
                 string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
@@ -214,6 +215,60 @@ namespace elect
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi!!!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string money = textBox1.Text.Trim();
+                double k = double.Parse(textBox2.Text.Trim());
+                string result = label9.Text.Trim(); // client bill
+
+                string dateTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                // Tạo chuỗi JSON thủ công
+                string json = $"{{ \"DateTime\": \"{dateTime}\", \"soKWH\": {k}, \"Tien\": {money:F3}}}";
+
+
+                string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string logFilePath = Path.Combine(documentsPath, "log.txt");
+
+                File.AppendAllText(logFilePath, json + Environment.NewLine);
+
+                MessageBox.Show("Lưu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBox1.Text = "";
+                textBox2.Text = "";
+                label9.Text = "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi!!!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                double t = double.Parse(textBox1.Text.Trim());     //total money
+
+                double k = moneyTokWh(t / 108 * 100);       //total kwh
+
+                int kThue = Convert.ToInt32(textBox2.Text.Trim());       //user kwh
+
+
+                //user usage = total - family used(family kwh*scale*1.08)
+                double result = t - kWhToMoney(k - kThue) * 1.08;
+                MessageBox.Show("Tiền điện khách phải trả là:\n" + result.ToString("F3") + " VNĐ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                label9.Text = result.ToString("F3");
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nhập số đi con lợn!", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
         }
     }
